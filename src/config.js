@@ -8,7 +8,7 @@ module.exports = function config() {
         loglevel: 'info',
       };
 
-    case 'staging':
+    case 'test':
       return {
         loglevel: 'verbose',
       };
