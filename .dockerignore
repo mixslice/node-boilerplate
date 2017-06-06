@@ -1,0 +1,8 @@
+README.md
+.git
+.gitignore
+.gitattributes
+.gitlab-ci.yml
+docker-compose.yml
+staging.yml
+production.yml
