@@ -9,17 +9,17 @@ describe('loading express', () => {
   afterEach(() => {
     server.close();
   });
-  it('responds to /', (done) => {
+  test('responds to /', done =>
     api.get('/')
-    .expect('Content-Type', /json/)
-    .expect(200)
-    .end((err, res) => {
-      expect(res.body.message).toEqual('hello');
-      done();
-    });
-  });
-  it('404 everything else', (done) => {
+      .expect('Content-Type', /json/)
+      .expect(200)
+      .end((err, res) => {
+        expect(res.body.message).toEqual('hello');
+        done();
+      }),
+  );
+  test('404 everything else', () =>
     api.get('/foo/bar')
-    .expect(404, done);
-  });
+      .expect(404),
+  );
 });
