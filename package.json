@@ -12,7 +12,9 @@
     "serve": "node dist/main",
     "lint": "eslint src",
     "lintfix": "eslint src --fix",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
