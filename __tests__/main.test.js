@@ -10,16 +10,9 @@ describe('loading express', () => {
     server.close();
   });
   test('responds to /', done =>
-    api.get('/')
-      .expect('Content-Type', /json/)
-      .expect(200)
-      .end((err, res) => {
-        expect(res.body.message).toEqual('hello');
-        done();
-      }),
-  );
-  test('404 everything else', () =>
-    api.get('/foo/bar')
-      .expect(404),
-  );
+    api.get('/').expect('Content-Type', /json/).expect(200).end((err, res) => {
+      expect(res.body.message).toEqual('hello');
+      done();
+    }));
+  test('404 everything else', () => api.get('/foo/bar').expect(404));
 });
