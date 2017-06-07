@@ -26,7 +26,6 @@ app.get('/', (req, res) => {
   });
 });
 
-
 /**
  * start app
  */
