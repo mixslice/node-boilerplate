@@ -2,7 +2,7 @@ README.md
 .git
 .gitignore
 .gitattributes
-.gitlab-ci.yml
+.vscode
+coverage
+node_modules
 docker-compose.yml
-staging.yml
-production.yml
