@@ -1,6 +1,7 @@
 import logger from 'winston';
 import express from 'express';
 import morgan from 'morgan';
+import bodyParser from 'body-parser';
 import Config from './config';
 
 const config = new Config();
@@ -16,6 +17,7 @@ const port = process.env.PORT || 5000;
  */
 const app = express();
 app.use(morgan('combined'));
+app.use(bodyParser.json());
 
 /**
  * provide root route
