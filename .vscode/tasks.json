@@ -12,13 +12,15 @@
       "args": [
         "start"
       ],
+      "isBackground": true,
       "isBuildCommand": true
     },
     {
       "taskName": "test",
       "args": [
         "test"
-      ]
+      ],
+      "isTestCommand": true
     },
     {
       "taskName": "coverage",
