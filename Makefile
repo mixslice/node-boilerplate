@@ -5,7 +5,7 @@ start:
 	docker-compose up
 
 test1:
-	docker-compose run --rm app npm test
+	docker-compose run --rm app yarn test
 
 test: test1
 

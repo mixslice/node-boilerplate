@@ -1,7 +1,10 @@
-app:
-  build: .
-  ports:
-    - "5000:5000"
-  volumes:
-    - ./src:/app/src
-    - ./__tests__:/app/__tests__
+version: "2.1"
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+      - /app/node_modules/
+    command: yarn start

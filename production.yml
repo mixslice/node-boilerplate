@@ -1,0 +1,11 @@
+version: "2.1"
+services:
+  app:
+    image: "mixslice/node-boilerplate"
+    ports:
+      - "5000"
+    environment:
+      - NODE_ENV=production
+      - LETSENCRYPT_HOST=api.demo.mixslice.com
+      - LETSENCRYPT_EMAIL=zeqing.zhang@mixslice.com
+      - VIRTUAL_HOST=api.demo.mixslice.com

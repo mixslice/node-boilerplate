@@ -8,6 +8,7 @@
     "build:babel": "NODE_ENV=production babel src --out-dir dist",
     "build": "yarn run clean && yarn run build:babel",
     "start:babel": "babel-node src/main",
+    "prestart": "yarn",
     "start": "nodemon --watch src --exec yarn run start:babel",
     "serve": "node dist/main",
     "lint": "eslint src",
